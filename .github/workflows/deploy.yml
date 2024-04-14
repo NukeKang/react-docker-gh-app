@@ -13,7 +13,7 @@ jobs:
       - run: docker build -t nukekang/react-test -f Dockerfile.dev .
 
       - name: Generate deployment package
-        run: zip -r deploy-v2.zip . -x '*.git*'
+        run: zip -r deploy-v1.zip . -x '*.git*'
 
       - name: Deploy to EB
         uses: einaregilsson/beanstalk-deploy@v22
@@ -25,5 +25,5 @@ jobs:
           existing_bucket_name: 'elasticbeanstalk-ap-northeast-2-730335362126'
           region: 'ap-northeast-2'
           version_label: ${{ github.sha}}
-          deployment_package: deploy-v2.zip
+          deployment_package: deploy-v1.zip
           wait_for_deployment: true
