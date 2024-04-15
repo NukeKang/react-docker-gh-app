@@ -20,8 +20,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
-          application_name: 'react-docker-test'
-          environment_name: 'React-docker-test-env'
+          application_name: 'gh-eb-test'
+          environment_name: 'gh-eb-test-env'
           existing_bucket_name: 'elasticbeanstalk-ap-northeast-2-730335362126'
           region: 'ap-northeast-2'
           version_label: ${{ github.sha}}
